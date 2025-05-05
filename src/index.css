@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 25% 98%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 266 100% 64%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 349 89% 72%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 266 100% 64%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 330 100% 81%;
+    --sidebar-foreground: 240 10% 3.9%;
+    --sidebar-primary: 330 100% 70%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 330 100% 88%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 330 100% 85%;
+    --sidebar-ring: 266 100% 64%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 266 100% 64%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 349 89% 72%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    --sidebar-background: 330 40% 30%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 330 80% 50%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 330 30% 40%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 330 40% 35%;
+    --sidebar-ring: 266 100% 64%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .card-gradient-pink {
+    @apply bg-gradient-to-br from-pink-300 to-pink-200;
+  }
+  
+  .card-gradient-purple {
+    @apply bg-gradient-to-br from-purple-300 to-purple-200;
+  }
+  
+  .card-gradient-blue {
+    @apply bg-gradient-to-br from-cyan-300 to-cyan-200;
+  }
+  
+  .sidebar-gradient {
+    @apply bg-gradient-to-b from-pink-300 to-purple-400;
+  }
+  
+  .progress-gradient {
+    @apply bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500;
+  }
+}
+
+.avatar-glow {
+  box-shadow: 0 0 0 4px #a78bfa55, 0 0 16px 4px #f472b655, 0 0 32px 8px #7c3aed33;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.avatar-glow:hover, .avatar-glow:focus {
+  box-shadow: 0 0 0 6px #a78bfa99, 0 0 32px 8px #f472b6cc, 0 0 64px 16px #7c3aed66;
+  transform: scale(1.06);
+  z-index: 2;
+}
+
+/* Кастомные блоки для уроков */
+.lesson-block-formula {
+  background: #e0e7ff;
+  color: #3730a3;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.dark .lesson-block-formula {
+  background: #232a3f !important;
+  color: #e0e7ff !important;
+}
+
+.lesson-block-tip {
+  background: #d1fae5;
+  color: #065f46;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.dark .lesson-block-tip {
+  background: #1a2a23 !important;
+  color: #b9fbc0 !important;
+}
+
+.lesson-block-question {
+  background: #fef9c3;
+  color: #a16207;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.dark .lesson-block-question {
+  background: #23221a !important;
+  color: #fffbe0 !important;
+}
+
+.lesson-block-challenge {
+  background: #fce7f3;
+  color: #be185d;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.dark .lesson-block-challenge {
+  background: #2a192f !important;
+  color: #f9a8d4 !important;
+}
+
+/* Сброс цвета текста внутри блоков, если используется Tailwind Typography */
+.prose .lesson-block-formula,
+.prose .lesson-block-tip,
+.prose .lesson-block-question,
+.prose .lesson-block-challenge {
+  color: inherit !important;
+  background: inherit !important;
+}
+/* Фиолетовые блоки (background:#f3e8ff) */
+.dark .prose div[style*="background:#f3e8ff"] {
+  background: #2a273f !important;
+  color: #e0e0fa !important;
+}
+/* Жёлтые блоки */
+.dark .prose div[style*="background:#fef3c7"] {
+  background: #23221a !important;
+  color: #fffbe0 !important;
+}
+/* Голубые блоки */
+.dark .prose div[style*="background:#e0e7ff"] {
+  background: #232a3f !important;
+  color: #e0e7ff !important;
+}
+/* Жёлтые блоки (background:#fef9c3) */
+.dark .prose div[style*="background:#fef9c3"] {
+  background: #23221a !important;
+  color: #fffbe0 !important;
+}
+/* Розовые блоки (background:#fee2e2) */
+.dark .prose div[style*="background:#fee2e2"] {
+  background: #3f2323 !important;
+  color: #ffe4e6 !important;
+}
+/* Голубые блоки (background:#dbeafe) */
+.dark .prose div[style*="background:#dbeafe"] {
+  background: #1e293b !important;
+  color: #bae6fd !important;
+}
+/* Голубой блок (background:#e0f2fe) */
+.dark .prose div[style*="background:#e0f2fe"] {
+  background: #164e63 !important;
+  color: #e0f2fe !important;
+}
+/* Мятный/зелёный блок (background:#d1fae5) */
+.dark .prose div[style*="background:#d1fae5"] {
+  background: #1a2a23 !important;
+  color: #b9fbc0 !important;
+}
