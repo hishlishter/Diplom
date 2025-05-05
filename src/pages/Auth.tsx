@@ -77,30 +77,30 @@ const Auth = () => {
   };
   
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-200 via-pink-100 to-indigo-100 relative overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-200 via-pink-100 to-indigo-100 dark:from-[#232136] dark:via-[#181825] dark:to-[#2a273f] relative overflow-hidden transition-colors duration-300">
       {/* Декоративные градиентные круги */}
-      <div className="absolute -top-32 -left-32 w-96 h-96 bg-gradient-to-br from-purple-300 via-pink-200 to-indigo-200 rounded-full opacity-30 blur-3xl animate-blob z-0" />
-      <div className="absolute top-1/2 right-0 w-80 h-80 bg-gradient-to-br from-pink-200 via-purple-200 to-indigo-200 rounded-full opacity-20 blur-2xl animate-blob animation-delay-2000 z-0" />
-      <div className="absolute bottom-0 left-1/2 w-72 h-72 bg-gradient-to-br from-indigo-200 via-pink-200 to-purple-200 rounded-full opacity-20 blur-2xl animate-blob animation-delay-4000 z-0" />
+      <div className="absolute -top-32 -left-32 w-96 h-96 bg-gradient-to-br from-purple-300 via-pink-200 to-indigo-200 rounded-full opacity-30 blur-3xl animate-blob z-0 dark:from-purple-900 dark:via-fuchsia-900 dark:to-indigo-900" />
+      <div className="absolute top-1/2 right-0 w-80 h-80 bg-gradient-to-br from-pink-200 via-purple-200 to-indigo-200 rounded-full opacity-20 blur-2xl animate-blob animation-delay-2000 z-0 dark:from-fuchsia-900 dark:via-purple-900 dark:to-indigo-900" />
+      <div className="absolute bottom-0 left-1/2 w-72 h-72 bg-gradient-to-br from-indigo-200 via-pink-200 to-purple-200 rounded-full opacity-20 blur-2xl animate-blob animation-delay-4000 z-0 dark:from-indigo-900 dark:via-fuchsia-900 dark:to-purple-900" />
       <div className="relative z-10 w-full max-w-lg mx-auto">
         <div className="flex flex-col items-center mb-8">
-          <div className="bg-gradient-to-br from-purple-400 via-pink-300 to-indigo-300 rounded-full p-4 shadow-lg mb-4 animate-float">
-            <BookOpen className="h-16 w-16 text-purple-600" />
+          <div className="bg-gradient-to-br from-purple-400 via-pink-300 to-indigo-300 rounded-full p-4 shadow-lg mb-4 animate-float dark:from-purple-700 dark:via-fuchsia-700 dark:to-indigo-700">
+            <BookOpen className="h-16 w-16 text-purple-600 dark:text-fuchsia-300" />
           </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-500 mb-2 tracking-tight text-center drop-shadow-lg">MarGO</h1>
-          <div className="h-1 w-24 mx-auto bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mb-2" />
-          <p className="text-lg text-muted-foreground text-center max-w-md mb-2">Открой новые горизонты английского языка вместе с MarGO!</p>
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-500 mb-2 tracking-tight text-center drop-shadow-lg dark:from-fuchsia-400 dark:via-purple-400 dark:to-indigo-400">MarGO</h1>
+          <div className="h-1 w-24 mx-auto bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mb-2 dark:from-fuchsia-400 dark:to-purple-400" />
+          <p className="text-lg text-muted-foreground text-center max-w-md mb-2 dark:text-purple-200">Открой новые горизонты английского языка вместе с MarGO!</p>
         </div>
-        <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-8 animate-fade-in">
+        <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-8 animate-fade-in dark:bg-[#232136] dark:text-purple-100 dark:border-[#393552]">
           <Tabs defaultValue="signin" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-8 bg-white/60 rounded-xl p-1 shadow-sm">
-              <TabsTrigger value="signin" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-100 data-[state=active]:to-pink-100 rounded-lg text-lg font-semibold transition-all">Вход</TabsTrigger>
-              <TabsTrigger value="signup" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-100 data-[state=active]:to-pink-100 rounded-lg text-lg font-semibold transition-all">Регистрация</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-2 mb-8 bg-white/60 rounded-xl p-1 shadow-sm dark:bg-[#232136] dark:border-[#393552]">
+              <TabsTrigger value="signin" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-100 data-[state=active]:to-pink-100 rounded-lg text-lg font-semibold transition-all dark:data-[state=active]:from-fuchsia-900 dark:data-[state=active]:to-purple-900 dark:text-purple-100">Вход</TabsTrigger>
+              <TabsTrigger value="signup" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-100 data-[state=active]:to-pink-100 rounded-lg text-lg font-semibold transition-all dark:data-[state=active]:from-fuchsia-900 dark:data-[state=active]:to-purple-900 dark:text-purple-100">Регистрация</TabsTrigger>
             </TabsList>
             <TabsContent value="signin">
               <form onSubmit={handleSignIn} className="space-y-6">
                 <div>
-                  <Label htmlFor="signin-email" className="text-gray-700 font-medium">Email</Label>
+                  <Label htmlFor="signin-email" className="text-gray-700 font-medium dark:text-purple-200">Email</Label>
                   <Input
                     id="signin-email"
                     type="email"
@@ -109,11 +109,11 @@ const Auth = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     disabled={isLoading}
-                    className="mt-2 bg-white/90 border-gray-200 focus:border-purple-400 focus:ring-purple-300 text-base py-3 px-4 rounded-xl shadow-sm"
+                    className="mt-2 bg-white/90 border-gray-200 focus:border-purple-400 focus:ring-purple-300 text-base py-3 px-4 rounded-xl shadow-sm dark:bg-[#2a273f] dark:text-purple-100 dark:border-[#393552] dark:placeholder:text-purple-300"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="signin-password" className="text-gray-700 font-medium">Пароль</Label>
+                  <Label htmlFor="signin-password" className="text-gray-700 font-medium dark:text-purple-200">Пароль</Label>
                   <Input
                     id="signin-password"
                     type="password"
@@ -121,18 +121,18 @@ const Auth = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                     disabled={isLoading}
-                    className="mt-2 bg-white/90 border-gray-200 focus:border-purple-400 focus:ring-purple-300 text-base py-3 px-4 rounded-xl shadow-sm"
+                    className="mt-2 bg-white/90 border-gray-200 focus:border-purple-400 focus:ring-purple-300 text-base py-3 px-4 rounded-xl shadow-sm dark:bg-[#2a273f] dark:text-purple-100 dark:border-[#393552] dark:placeholder:text-purple-300"
                   />
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-600 hover:to-purple-600 text-white font-semibold py-3 rounded-xl shadow-md transition-all duration-300 text-lg"
+                  className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-600 hover:to-purple-600 text-white font-semibold py-3 rounded-xl shadow-md transition-all duration-300 text-lg dark:from-fuchsia-700 dark:to-purple-700 dark:hover:from-purple-700 dark:hover:to-fuchsia-700"
                   disabled={isLoading || !supabaseInitialized}
                 >
                   {isLoading ? 'Загрузка...' : 'Войти'}
                 </Button>
                 {!supabaseInitialized && (
-                  <div className="flex items-center mt-4 p-3 bg-blue-50 rounded-lg text-blue-600 text-sm">
+                  <div className="flex items-center mt-4 p-3 bg-blue-50 rounded-lg text-blue-600 text-sm dark:bg-[#232136] dark:text-purple-200">
                     <Info className="h-4 w-4 mr-2 flex-shrink-0" />
                     <p>
                       Для настройки Supabase, создайте файл .env с переменными VITE_SUPABASE_URL и VITE_SUPABASE_ANON_KEY
@@ -144,7 +144,7 @@ const Auth = () => {
             <TabsContent value="signup">
               <form onSubmit={handleSignUp} className="space-y-6">
                 <div>
-                  <Label htmlFor="signup-username" className="text-gray-700 font-medium">Имя пользователя</Label>
+                  <Label htmlFor="signup-username" className="text-gray-700 font-medium dark:text-purple-200">Имя пользователя</Label>
                   <Input
                     id="signup-username"
                     type="text"
@@ -152,11 +152,11 @@ const Auth = () => {
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     disabled={isLoading || !supabaseInitialized}
-                    className="mt-2 bg-white/90 border-gray-200 focus:border-purple-400 focus:ring-purple-300 text-base py-3 px-4 rounded-xl shadow-sm"
+                    className="mt-2 bg-white/90 border-gray-200 focus:border-purple-400 focus:ring-purple-300 text-base py-3 px-4 rounded-xl shadow-sm dark:bg-[#2a273f] dark:text-purple-100 dark:border-[#393552] dark:placeholder:text-purple-300"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="signup-email" className="text-gray-700 font-medium">Email</Label>
+                  <Label htmlFor="signup-email" className="text-gray-700 font-medium dark:text-purple-200">Email</Label>
                   <Input
                     id="signup-email"
                     type="email"
@@ -165,11 +165,11 @@ const Auth = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     disabled={isLoading}
-                    className="mt-2 bg-white/90 border-gray-200 focus:border-purple-400 focus:ring-purple-300 text-base py-3 px-4 rounded-xl shadow-sm"
+                    className="mt-2 bg-white/90 border-gray-200 focus:border-purple-400 focus:ring-purple-300 text-base py-3 px-4 rounded-xl shadow-sm dark:bg-[#2a273f] dark:text-purple-100 dark:border-[#393552] dark:placeholder:text-purple-300"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="signup-password" className="text-gray-700 font-medium">Пароль</Label>
+                  <Label htmlFor="signup-password" className="text-gray-700 font-medium dark:text-purple-200">Пароль</Label>
                   <Input
                     id="signup-password"
                     type="password"
@@ -177,12 +177,12 @@ const Auth = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                     disabled={isLoading}
-                    className="mt-2 bg-white/90 border-gray-200 focus:border-purple-400 focus:ring-purple-300 text-base py-3 px-4 rounded-xl shadow-sm"
+                    className="mt-2 bg-white/90 border-gray-200 focus:border-purple-400 focus:ring-purple-300 text-base py-3 px-4 rounded-xl shadow-sm dark:bg-[#2a273f] dark:text-purple-100 dark:border-[#393552] dark:placeholder:text-purple-300"
                   />
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-600 hover:to-purple-600 text-white font-semibold py-3 rounded-xl shadow-md transition-all duration-300 text-lg"
+                  className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-600 hover:to-purple-600 text-white font-semibold py-3 rounded-xl shadow-md transition-all duration-300 text-lg dark:from-fuchsia-700 dark:to-purple-700 dark:hover:from-purple-700 dark:hover:to-fuchsia-700"
                   disabled={isLoading || !supabaseInitialized}
                 >
                   {isLoading ? 'Загрузка...' : 'Зарегистрироваться'}
